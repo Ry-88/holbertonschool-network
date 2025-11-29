@@ -1,5 +1,4 @@
-#!/bin/bash
-
+ #!/usr/bin/env bash
 # Script to update /etc/hosts:
 # - localhost -> 127.0.0.2
 # - facebook.com -> 8.8.8.8
