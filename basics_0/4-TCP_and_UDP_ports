@@ -1,5 +1,3 @@
-#!/bin/bash
-
-# Display listening TCP and UDP ports with associated PID and program name
-echo "Active Internet connections (only servers)"
-ss -tulnp
+#!/usr/bin/env bash
+# Bash script that display listening ports with PID and program names for listening sockets.
+netstat -a -p
