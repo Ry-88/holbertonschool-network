@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Display listening TCP and UDP ports with associated PID and program name
+echo "Active Internet connections (only servers)"
+ss -tulnp
