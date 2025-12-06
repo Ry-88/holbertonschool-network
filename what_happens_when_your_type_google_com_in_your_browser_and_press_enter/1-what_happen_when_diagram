@@ -1,0 +1,73 @@
+User Browser
+     |
+     | Type URL: https://www.google.com
+     v
++------------------------+
+|  DNS Resolver          |
+|  - Translates domain   |
+|    www.google.com      |
+|    → IP address        |
++------------------------+
+     |
+     | Connect to server IP (TCP/IP, Port 443)
+     v
++------------------------+
+|      Firewall          |
+|  - Inspects traffic    |
+|  - Blocks malicious    |
++------------------------+
+     |
+     | Encrypted HTTPS traffic (TLS/SSL)
+     v
++------------------------+
+|    Load Balancer       |
+|  - Distributes request |
+|    to web servers      |
++------------------------+
+     |
+     v
++------------------------+
+|     Web Server         |
+|  - Serves static files |
+|  - Forwards dynamic    |
+|    requests to App     |
++------------------------+
+     |
+     v
++------------------------+
+| Application Server     |
+| - Generates dynamic    |
+|   web page             |
+| - Queries Database     |
++------------------------+
+     |
+     v
++------------------------+
+| Database Server        |
+| - Stores persistent    |
+|   data                 |
+| - Returns requested    |
+|   information          |
+
+
+Diagram Notes
+
+DNS Resolution: User’s browser asks for IP before connecting.
+
+Server IP & Port: HTTPS uses TCP port 443.
+
+Traffic Encryption: TLS/SSL secures data between browser and server.
+
+Firewall: Protects servers from unauthorized access.
+
+Load Balancer: Distributes traffic for high availability.
+
+Web Server: Serves static content or passes dynamic requests.
+
+Application Server: Generates dynamic content.
+
+Database: Supplies the data required by the application server.
++------------------------+
+     |
+     v
+Back to Browser → Rendered web page
